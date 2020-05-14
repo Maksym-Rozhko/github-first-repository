@@ -1,5 +1,5 @@
 const arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-let positiveNumbersSum = 0, positiveNumbersElements = [], // a.
+let positiveNumbersSum = 0, positiveNumbersElements = [],
     minElement = 0, minElementIndexNumber, 
     maxElement = 0, maxElementIndexNumber, 
     negativeNumbersElements = [], 
@@ -16,25 +16,24 @@ for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
         positiveNumbersElements.push(arr[i]);
         positiveNumbersSum += arr[i];
+        if (arr[i] % 2 === 0) {
+            positiveNumbersElementsEven.push(arr[i]);
+            sumEvenPositive += arr[i];
+        } else if (arr[i] % 2) {
+            positiveNumbersElementsOdd.push(arr[i]);
+            sumOddPositive += arr[i]; 
+        }
     }
     if(arr[i] <= minElement) {
         minElement = arr[i];
-        minElementIndexNumber = i;
+        minElementIndexNumber = i + 1;
     }
     if(arr[i] >= maxElement) {
         maxElement = arr[i];
-        maxElementIndexNumber = i;
+        maxElementIndexNumber = i + 1;
     }
     if (arr[i] < 0) {
         negativeNumbersElements.push(arr[i]);
-    }
-    if (arr[i] > 0 && arr[i] % 2 === 0) {
-        positiveNumbersElementsEven.push(arr[i]);
-        sumEvenPositive += arr[i];
-    }
-    if (arr[i] > 0 && arr[i] % 2) {
-        positiveNumbersElementsOdd.push(arr[i]);
-        sumOddPositive += arr[i];
     }
     if (arr[i] > 0) {
         productOfPositiveNumbers *= arr[i];
