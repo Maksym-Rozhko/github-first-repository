@@ -25,6 +25,17 @@ for (let i = 0; i < arr.length; i++) {
         maxElement = arr[i];
         maxElementIndexNumber = i;
     }
+    if (arr[i] < 0) {
+        negativeNumbersElements.push(arr[i]);
+    }
+    if (arr[i] > 0 && arr[i] % 2 === 0) {
+        positiveNumbersElementsEven.push(arr[i]);
+        sumEvenPositive += arr[i];
+    }
+    if (arr[i] > 0 && arr[i] % 2) {
+        positiveNumbersElementsOdd.push(arr[i]);
+        sumOddPositive += arr[i];
+    }
 }
 
 document.write('<p>' + 'Cуммa' + ' ' + positiveNumbersSum + '<p/>');
@@ -33,3 +44,8 @@ document.write('<p>' + 'Минимальный элемент массива' + 
 document.write('<p>' + 'Порядковый номер минимального элемента массива' + ' ' + minElementIndexNumber + '<p/>');
 document.write('<p>' + 'Максимальный элемент массива' + ' ' + maxElement + '<p/>');
 document.write('<p>' + 'Порядковый номер максимального элемента массива' + ' ' + maxElementIndexNumber + '<p/>');
+document.write('<p>' + 'Количество отрицательных элементов' + ' ' + negativeNumbersElements.length + '</p>');
+document.write('<p>' + 'Количество нечетных положительных элементов' + ' ' + positiveNumbersElementsOdd.length + '</p>');
+document.write('<p>' + 'Количество четных положительных элементов' + ' ' + positiveNumbersElementsEven.length + '</p>');
+document.write('<p>' + 'Сумма четных положительных элементов' + ' ' + sumEvenPositive + '<p/>');
+document.write('<p>' + 'Сумма нечетных положительных элементов' + ' ' + sumOddPositive + '<p/>');
