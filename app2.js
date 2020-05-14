@@ -36,6 +36,16 @@ for (let i = 0; i < arr.length; i++) {
         positiveNumbersElementsOdd.push(arr[i]);
         sumOddPositive += arr[i];
     }
+    if (arr[i] > 0) {
+        productOfPositiveNumbers *= arr[i];
+    }
+    if (arr[i] >= maxElement) {
+        maxElement = arr[i];
+        arr[nullifyNumbers] = 0;
+        nullifyNumbers = i;
+    } else {
+        arr[i] = 0;
+    }
 }
 
 document.write('<p>' + 'Cуммa' + ' ' + positiveNumbersSum + '<p/>');
@@ -49,3 +59,5 @@ document.write('<p>' + 'Количество нечетных положител
 document.write('<p>' + 'Количество четных положительных элементов' + ' ' + positiveNumbersElementsEven.length + '</p>');
 document.write('<p>' + 'Сумма четных положительных элементов' + ' ' + sumEvenPositive + '<p/>');
 document.write('<p>' + 'Сумма нечетных положительных элементов' + ' ' + sumOddPositive + '<p/>');
+document.write('<p>' + 'Произведение положительных элементов' + ' ' + productOfPositiveNumbers + '<p/>');
+document.write('<p>' + 'Обнуление' + ' ' +  arr + '</p>');
