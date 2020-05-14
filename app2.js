@@ -9,4 +9,15 @@ let positiveNumbersSum = 0, positiveNumbersElements = [], // a.
     sumOddPositive = 0,
     productOfPositiveNumbers = 1,
     nullifyNumbers; 
-    
+
+
+document.write(arr);
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+        positiveNumbersElements.push(arr[i]);
+        positiveNumbersSum += arr[i];
+    }
+}
+
+document.write('<p>' + 'Cуммa' + ' ' + positiveNumbersSum + '<p/>');
+document.write('<p>' + 'Количество положительных элементов' + ' ' + positiveNumbersElements.length + '</p>');
