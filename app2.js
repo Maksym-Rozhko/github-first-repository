@@ -17,7 +17,13 @@ for (let i = 0; i < arr.length; i++) {
         positiveNumbersElements.push(arr[i]);
         positiveNumbersSum += arr[i];
     }
+    if(arr[i] <= minElement) {
+        minElement = arr[i];
+        minElementIndexNumber = i;
+    }
 }
 
 document.write('<p>' + 'Cуммa' + ' ' + positiveNumbersSum + '<p/>');
 document.write('<p>' + 'Количество положительных элементов' + ' ' + positiveNumbersElements.length + '</p>');
+document.write('<p>' + 'Минимальный элемент массива' + ' ' + minElement + '<p/>');
+document.write('<p>' + 'Порядковый номер минимального элемента массива' + ' ' + minElementIndexNumber + '<p/>');
