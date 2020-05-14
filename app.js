@@ -6,15 +6,24 @@
 let digitElement, userDigit, arr = [];
 
 function compareDigit(a, b) {
-    if (a > b) return 1;
-    if (a == b) return 0;
-    if (a < b) return -1;
+    if (a > b) {
+        return 1;
+    }
+    if (a === b) {
+        return 0;
+    }
+    if (a < b) {
+        return -1;
+    }
 }
 
-userDigit = parseInt(prompt('Set array length'));
+do {
+    userDigit = parseInt(prompt('Set array length'));
+}while ( userDigit <= 0);
+
 
 for (let i = 0; i < userDigit; i++) {
-    digitElement = parseInt(prompt('Enter digit #' + (i + 1)));
+    digitElement = prompt('Enter digit #' + (i + 1));
     arr.push(digitElement);
 }
 document.write('<p/>' + arr + '<p/>');
