@@ -21,9 +21,15 @@ for (let i = 0; i < arr.length; i++) {
         minElement = arr[i];
         minElementIndexNumber = i;
     }
+    if(arr[i] >= maxElement) {
+        maxElement = arr[i];
+        maxElementIndexNumber = i;
+    }
 }
 
 document.write('<p>' + 'Cуммa' + ' ' + positiveNumbersSum + '<p/>');
 document.write('<p>' + 'Количество положительных элементов' + ' ' + positiveNumbersElements.length + '</p>');
 document.write('<p>' + 'Минимальный элемент массива' + ' ' + minElement + '<p/>');
 document.write('<p>' + 'Порядковый номер минимального элемента массива' + ' ' + minElementIndexNumber + '<p/>');
+document.write('<p>' + 'Максимальный элемент массива' + ' ' + maxElement + '<p/>');
+document.write('<p>' + 'Порядковый номер максимального элемента массива' + ' ' + maxElementIndexNumber + '<p/>');
